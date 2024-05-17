@@ -89,19 +89,19 @@ class Time{
             }
 
             // carry
-            if(this->second>= 60){
+            while(this->second>= 60){
 
-                minute+= second/ 60;
-                second%= 60;
+                minute++;
+                second-= 60;
             }
-            if(this->minute>= 60){
+            while(this->minute>= 60){
 
-                hour+= minute/ 60;
-                minute%= 60;
+                hour++;
+                minute-= 60;
             }
-            if(this->hour>= 24){
+            while(this->hour>= 24){
 
-                hour%= 24;
+                hour-= 24;
             }
             while(this->second< 0){
 
